@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="flex flex-col h-screen justify-between">
+    <header class="h-10 bg-red-500">Header</header>
+
+    <div class="mt-4">
+      <label class="block">
+        <span class="text-gray-700">Name</span>
+        <input id="search" class="form-input mt-1 block" placeholder="Jane Doe">
+      </label>
+    </div>
+
+
+    <main id="match-list" class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10">
+
+    </main>
+    <footer class="h-10 bg-blue-500">Footer</footer>
+  </div>
+
+  <script src="js/stringtools.js"></script>
+  <script src="js/plugins.js"></script>
+
+  
+
+<!--
+  <div class="px-6 py-12">
+    <img class="h-20" src="img/logo-mastercard.svg" alt="logo">
+    <img class="mt-6 rounded-lg shadow-2xl" src="img/oficina-banco.jpg" alt="oficina">
+    <h1 class="m7-6 text-2xl font-bold text-gray-600 leading-tight">
+        Hipotecas accesibles <span class="text-indigo-500">para todos</span>
+    </h1>
+    <p class="mt-2 text-gray-600">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eaque voluptas quos unde est, soluta quae maiores eius, odit sint libero repellendus nostrum nobis architecto, illum commodi esse harum officiis?
+    </p>
+    <div class="mt-6"> 
+      <a href="#" class=" inline-block px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-400 text-white uppercase font-medium tracking-wider shadow-lg">Pulsa aquí</a>
+    </div>
+  </div>
+-->
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://componentes.cnig.es/api-core/test.html -->
+<html data-redeviation-bs-uid="45744"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Test API-CNIG</title>
+    <style type="text/css">
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+        }
+
+        .container {
+            max-width: 1344px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .cabecera {
+            padding: 3rem 1.5rem;
+            color: white;
+            background: #8f2031;
+            display: block;
+            position: relative;
+        }
+
+        h1 {
+            clear: both;
+            font-weight: 400;
+            padding-left: 0.3em;
+            padding-top: 1.2em;
+        }
+
+        .cabecera .container {
+            padding-left: 0.4rem;
+        }
+
+        .titulo {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.125;
+        }
+
+        .subtitulo {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        .prueba {
+            height: 10em;
+            width: 15.8em;
+            margin: .5rem;
+            float: left;
+            overflow: hidden;
+            text-overflow: clip;
+            word-wrap: break-word;
+            padding: 0.2em;
+            text-align: center;
+            background-color: #209cee;
+            border-radius: 0.4rem;
+            color: white;
+        }
+
+        div.prueba>p:nth-child(3) {
+            font-size: 10pt;
+            padding: 0 0.5em;
+            overflow-y: auto;
+            height: 4.5em;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .prueba>a {
+            display: block;
+            position: relative;
+            padding-top: 0.7em;
+            font-size: 14pt;
+            color: white;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+        }
+
+        img:hover {
+            opacity: 0.7;
+        }
+
+        div.prueba>p:nth-child(3)::-webkit-scrollbar {
+            display: none;
+        }
+
+        .prueba:hover {
+            background-color: #5fc6e6;
+        }
+
+        .pending {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4E4E4E;
+        }
+
+        .prueba p {
+            font-size: 10pt;
+            padding: 0 0.5em;
+        }
+
+        .idiomas {
+            padding-top: 0.4em;
+        }
+    </style>
+<style class="redeviation-bs-style" data-name="content">body>div#redeviation-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#redeviation-bs-sidebar.redeviation-bs-visible,body>iframe#redeviation-bs-overlay.redeviation-bs-visible{opacity:1;pointer-events:auto}body.redeviation-bs-noscroll{overflow:hidden !important}body>div#redeviation-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#redeviation-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#redeviation-bs-indicator[data-pos='right']{left:auto;right:0}body>div#redeviation-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#redeviation-bs-indicator.redeviation-bs-fullHeight>div{border-radius:0}body>div#redeviation-bs-indicator.redeviation-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb{height:100% !important;top:0 !important}body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div{background:transparent}body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#redeviation-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(0,0,0,0.6) !important;speak:none;border:none;display:block !important;transform:translate3d(-350px, 0, 0);transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#redeviation-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>iframe#redeviation-bs-sidebar.redeviation-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#redeviation-bs-sidebar.redeviation-bs-hideMask{background:none !important}body>iframe#redeviation-bs-sidebar.redeviation-bs-hideMask:not(.redeviation-bs-hover){width:calc(350px + 50px)}body>iframe#redeviation-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;speak:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
+</style></head>
+
+<body>
+    <div class="cabecera">
+        <div class="container">
+            <div class="titulo">API-CNIG</div>
+            <div class="subtitulo">Galería de tests</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Plugins</h1>
+        <!-- attributions -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/attributions.jsp"><b>[attributions]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/attributions.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/attributions.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/attributions"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite mostrar información de atribuciones sobre las capas que se visualizan en el mapa.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- backimglayer -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/backimglayer.jsp"><b>[backimglayer]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/backimglayer.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/backimglayer.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/backimglayer"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite la elección de cada de fondo mediante previsualización de las posibles capas.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- beautytoc -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/beautytoc.jsp"><b>[beautytoc]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/beautytoc.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/beautytoc.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/beautytoc"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Tabla de contenidos de fototeca. Consulta cobertura de vuelo sobre la vista.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- buffer -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/buffer.jsp"><b>[buffer]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/buffer.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/buffer.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/buffer"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Cálculo de áreas de influencia sobre geometrías que se van dibujando sobre la vista.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- comparepanel -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/comparepanel.jsp"><b>[comparepanel]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/comparepanel.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/comparepanel.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/comparepanel"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin con todos los comparadores</p>
+            <p>v1.0</p>
+        </div>
+        <!-- contactlink -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/contactlink.jsp"><b>[contactlink]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/contactlink.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/contactlink.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/contactlink"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Provee de enlaces a sitios, redes sociales y correo institucionales.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- fulltoc -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/fulltoc.jsp"><b>[fulltoc]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/fulltoc.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/fulltoc.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/fulltoc"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Permite gestionar y cargar wms y wmts y configurar opacidad, estilos, visibilidad y consulta de metadatos, además de facilitar la carga de servicios preconfigurados.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- geometrydraw -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/geometrydraw.jsp"><b>[geometrydraw]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/geometrydraw.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/geometrydraw.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/geometrydraw"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Permite el dibujo y edición de geometrías sobre un mapa, así como su carga y descarga.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- georefimage -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/georefimage0.jsp"><b>[georefimage]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/georefimage0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/georefimage0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/georefimage"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite la descarga de la imagen georeferenciada que se muestra en pantalla.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- ignsearch -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearch.jsp"><b>[ignsearch]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearch.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearch.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/ignsearch"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite la búsqueda de Direcciones postales (Geocoder de Cartociudad) y Topónimos (Nomenclátor del IGN)</p>
+            <p>v1.0</p>
+        </div>
+        <!-- ignsearchlocator -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearchlocator.jsp"><b>[ignsearchlocator]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearchlocator.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/ignsearchlocator.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/ignsearchlocator"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite la búsqueda de Direcciones postales (Geocoder de Cartociudad) y Topónimos (Nomenclátor del IGN), también permite localizar coordenadas en varios SRS</p>
+            <p>v1.0</p>
+        </div>
+        <!-- infocatastro -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/infocatastro.jsp"><b>[infocatastro]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/infocatastro.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/infocatastro.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/infocatastro"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra referencia catastral para un punto y provee de enlace a la información de la DGC</p>
+            <p>v1.0</p>
+        </div>
+
+        <!-- infocoordinates -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/infocoordinates.jsp"><b>[infocoordinates]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/infocoordinates.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/infocoordinates.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/infocoordinates"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra las coordenadas de los puntos que se van señalando en el mapa. Permite cambiarlas entre ETRS89, WGS84 y REGCAN95 </p>
+            <p>v1.0</p>
+        </div>
+
+        <!-- information -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/information.jsp"><b>[information]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/information.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/information.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/information"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra información GetFeatureInfo mediante activación de plugin</p>
+            <p>v1.0</p>
+        </div>
+        <!-- lyrcompare -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/lyrcompare.jsp"><b>[lyrcompare]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/lyrcompare.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/lyrcompare.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/lyrcompare"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite comparar varias capas sobre una cartografía base.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- measurebar -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/measurebar.jsp"><b>[measurebar]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/measurebar.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/measurebar.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/measurebar"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Herramienta de medición de áreas y distancias.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- mirrorpanel -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/mirrorpanel.jsp"><b>[mirrorpanel]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/mirrorpanel.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/mirrorpanel.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/mirrorpanel"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite comparar varias capas dividiendo la pantalla en varias partes.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- mousesrs -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/mousesrs.jsp"><b>[mousesrs]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/mousesrs.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/mousesrs.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/mousesrs"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra las coordenadas de ratón.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- MVT -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/MVT.jsp"><b>[MVT]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/MVT.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/MVT.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+            </div>
+            <p>Test para añadir teselas vectoriales al mapa.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- overview -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/overview.jsp"><b>[overview]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/overview.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/overview.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/overview"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Mapa de localización sobre la vista.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- popup -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/popup.jsp"><b>[popup]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/popup.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/popup.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/popup"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra un popup con un contenido html</p>
+            <p>v1.0</p>
+        </div>
+        <!-- predefinedzoom -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/predefinedzoom0.jsp"><b>[predefinedzoom]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/predefinedzoom0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/predefinedzoom0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/predfinedzoom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Centra el mapa en la/s vista/s indicada/s por parámetro.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- printermap -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/printermap0.jsp"><b>[printermap]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/printermap0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/printermap0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/printermap"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin de impresión a través del servicio Geoprint.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- rescale -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/rescale0.jsp"><b>[rescale]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/rescale0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/rescale0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/rescale"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Hace zoom a la escala elegida.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- selectiondraw -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/selectiondraw0.jsp"><b>[selectiondraw]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/selectiondraw0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/selectiondraw0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/selectiondraw"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Permite dibujar geometrías y obtenerlas al terminar.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- selectionzoom -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/selectionzoom0.jsp"><b>[selectionzoom]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/selectionzoom0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/selectionzoom0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/selectionzoom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite la elección de cada de fondo mediante previsualización de las posibles capas.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- sharemap -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/sharemap0.jsp"><b>[sharemap]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/sharemap0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/sharemap0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/sharemap"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite copiar la url del mapa actual visualizado. Exporta la información de todas las capas cargadas en el mapa.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- toc -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/toc.jsp"><b>[toc]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/toc.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/toc.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/toc"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra un árbol de contenidos con las capas disponibles para mostrar.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- topographicprofile -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/topographicprofile.jsp"><b>[topographicprofile]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/topographicprofile.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/topographicprofile.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/topographicprofile"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Muestra la topografía de una zona marcada por el usuario.</p>
+            <p>v1.0</p>
+        </div>
+          <!-- timeline -->
+          <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/timeline.jsp"><b>[timeline]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/timeline.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/timeline.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/timeline"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin de línea del tiempo</p>
+            <p>v1.0</p>
+        </div>
+        <!-- transparency -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/transparency0.jsp"><b>[transparency]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/transparency0.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/transparency0.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/transparency"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite aplicar un efecto de transparencia a la capa seleccionada.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- vectors -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/vectors.jsp"><b>[vectors]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/vectors.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/vectors.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/vectors"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite el dibujo y edición de geometrías sobre un mapa, así como su descarga.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- viewhistory -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/viewhistory.jsp"><b>[viewhistory]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/viewhistory.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/viewhistory.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/viewhistory"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite navegar entre las vistas visitadas del mapa (hacia adelante y atrás).</p>
+            <p>v1.0</p>
+        </div>
+        <!-- viewshed -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/viewshed.jsp"><b>[viewshed]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/viewshed.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/viewshed.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/viewshed"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que consultar el área visible a partir de un punto.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- xylocator -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/xylocator.jsp"><b>[xylocator]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/xylocator.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/xylocator.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/xylocator"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite localizar las coordenas introducidas por el usuario en un Sistema de referencia determinado.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- zoomextent -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/zoomextent.jsp"><b>[zoomextent]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/zoomextent.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/zoomextent.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/zoomextent"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Plugin que permite realizar zoom con una caja sobre el mapa.</p>
+            <p>v1.0</p>
+        </div>
+        <!-- zoompanel -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/zoompanel.jsp"><b>[zoompanel]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/zoompanel.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/zoompanel.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/zoompanel"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+            <p>Ofrece diferentes herramientas de zoom.</p>
+            <p>v1.0</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Controles</h1>
+        <!-- backgroundlayers -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/backgroundlayers.jsp"><b>[backgroundlayers]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/backgroundlayers.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/backgroundlayers.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Backgroundlayers"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- getfeatureinfo -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/getfeatureinfo.jsp"><b>[getfeatureinfo]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/getfeatureinfo.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/getfeatureinfo.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Getfeatureinfo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- location -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/location.jsp"><b>[location]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/location.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/location.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Location"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- panzoom -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/panzoom.jsp"><b>[panzoom]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/panzoom.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/panzoom.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Panzoom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- panzoombar -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/panzoombar.jsp"><b>[panzoombar]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/panzoombar.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/panzoombar.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Panzoombar"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- rotate -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/rotate.jsp"><b>[rotate]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/rotate.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/rotate.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Rotate"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- scale -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/scale.jsp"><b>[scale]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/scale.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/scale.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Scale"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+        <!-- scaleline -->
+        <div class="prueba">
+            <a target="_blank" href="http://componentes.cnig.es/api-core/scaleline.jsp"><b>[scaleline]</b></a>
+            <div class="idiomas">
+                <a target="_blank" href="http://componentes.cnig.es/api-core/scaleline.jsp?language=es"><img src="https://i.gyazo.com/48351abb095c62e67ac0e0490e825cff.png" width="30"></a>
+                <a target="_blank" href="http://componentes.cnig.es/api-core/scaleline.jsp?language=en"><img src="https://i.gyazo.com/4635b83889405b888cc7eb6c8fde4b85.png" width="30"></a>
+                <a target="_blank" href="https://github.com/IGN-CNIG/API-CNIG/wiki/M.control.Scaleline"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30"></a>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" async="" src="https://i.gyazo.com/analytics.js.descarga"></script><script async="" src="https://i.gyazo.com/js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-163660977-1');
+</script>
+
+
+<div id="diigo-video-capture" style="display: none;"><div id="diigo-video-capture-container"><div id="diigo-video-capture-logo"></div>Capture</div></div><div id="diigo-video-capture-wrapper"><div id="diigo-video-capture-wrapper-tip">Drag to outliner or <span id="diigo-video-capture-upload">Upload</span></div><div id="diigo-video-capture-wrapper-close">Close</div></div><iframe id="redeviation-bs-sidebar" class="notranslate" aria-hidden="true" data-theme="default" data-pos="left" src="https://i.gyazo.com/saved_resource.html"></iframe><div id="redeviation-bs-indicator" data-theme="default" class="redeviation-bs-fullHeight" style="width: 20px; height: 100%; top: 0%;"></div><div id="diigo-chrome-installed" style="display: none;"></div></body></html>

@@ -1,0 +1,57 @@
+[
+  {
+    "abbr": "AL",
+    "name": "Alabama",
+    "capital": "Montgomery"
+  },
+  {
+    "abbr": "AK",
+    "name": "Alaska",
+    "capital": "Juneau"
+  },
+  {
+    "abbr": "AZ",
+    "name": "Arizona",
+    "capital": "Phoenix"
+  },
+  {
+    "abbr": "AR",
+    "name": "Arkansas",
+    "capital": "Little Rock"
+  },
+  {
+    "abbr": "CA",
+    "name": "California",
+    "capital": "Sacramento"
+  },
+  {
+    "abbr": "MI",
+    "name": "Michigan",
+    "capital": "Detroit"
+  },
+  {
+    "abbr": "FL",
+    "name": "Florida",
+    "capital": "Miami"
+  },
+  {
+    "abbr": "OR",
+    "name": "Oregon",
+    "capital": "Portland"
+  },
+  {
+    "abbr": "NE",
+    "name": "Nevada",
+    "capital": "Las Vegas"
+  },
+  {
+    "abbr": "TX",
+    "name": "Texas",
+    "capital": "Austin"
+  },
+  {
+    "abbr": "PR",
+    "name": "Puerto Rico",
+    "capital": "San José"
+  }
+]

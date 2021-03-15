@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API CNIG - Galería de Test</title>
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" type="text/css">
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" ><!-- v5.14 -->
+  <link rel="stylesheet" href="css/styles.css" ><!-- v5.14 -->
+
+</head>
+<body>
+  <!-- https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f2c57ee4-11e2-4c50-9887-f00dc3a7e358/d73pi5f-c821d7ce-901e-4f02-8d4d-ebbf2a00d108.png -->
+  <header class="navbar navbar-expand-md navbar-dark mb-3 py-0 fixed-top" role="navigation">
+    <a class="navbar-brand" href="#"><img class="header-logo" src="img/logo-apicnig.png" alt="">&nbsp;API-CNIG</a> Test
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#olmenu" aria-controls="olmenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- menu items that get hidden below 768px width -->
+    <nav class="collapse navbar-collapse" id="olmenu">
+      <!--<form class="form-inline" role="search">
+        <div class="input-group">
+        <input name="q" type="text" id="keywords" class="form-control search-query" placeholder="Search" aria-label="Examples" aria-describedby="count" autocomplete="off" autofocus>
+        <div class="input-group-append">
+            <span class="input-group-text text-white bg-transparent" id="count"></span>
+        </div>
+        </div>
+      </form>-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <!--<a class="nav-link dropdown-toggle" href="#" id="docdropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentación</a>
+          <div class="dropdown-menu dropdown-menu-right mb-3" aria-labelledby="docdropdown">
+            <a class="dropdown-item" href="https://github.com/IGN-CNIG/API-CNIG/wiki" target="_blank">Documentación</a>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="fa fa-check fa-fw mr-2 fa-lg"></i>Quick Start</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-question fa-fw mr-2 fa-lg"></i>FAQ</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-book fa-fw mr-2 fa-lg"></i>Tutorials</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-graduation-cap fa-fw mr-2 fa-lg"></i>Workshop</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="fa fa-stack-overflow fa-fw mr-2"></i>Ask a Question</a>
+          </div>-->
+        </li>
+        <li class="nav-item"><a class="nav-link" href="idee.html"><i class="fas fa-hourglass-end"></i> Old version</a></li>
+        <li class="nav-item"><a target="_blank" class="nav-link" href="https://github.com/IGN-CNIG/API-CNIG/wiki"><i class="fas fa-user-graduate"></i> Wiki</a></li>
+        <li class="nav-item"><a target="_blank" class="nav-link" href="https://github.com/IGN-CNIG/API-CNIG"><i class="fa fa-sitemap mr-1"></i> API</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+
+      <div class="col-md-12 m-auto">
+        <h3 class="text-center mb-3">
+          <i class="fas fa-puzzle-piece"> Galería de plugins</i> 
+        </h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" placeholder="Buscar plugin" name="search" id="search">
+        </div>
+      
+        <div id="match-list" class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 py-5">
+
+        </div>
+
+      </div>
+
+
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer" >
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-12 col-md" >
+            <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+          </div> -->
+         
+          <div class="col-6 col-md">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Calle General Ibáñez de Ibero, 3</a></li>
+              <li><a class="link-secondary" href="#">Madrid 28003</a></li>
+              <li><a class="link-secondary" href="#">idee@mitma.es</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a target="_blank" class="link-secondary" href="http://10.67.33.156:8085/mapa-web">Mapa web</a></li>
+              <li><a target="_blank" class="link-secondary" href="http://10.67.33.156:8085/aviso-legal">Aviso legal</a></li>
+            </ul>
+          </div>
+          <!-- <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Team</a></li>
+              <li><a class="link-secondary" href="#">Locations</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </footer>
+
+  <script src="js/stringtools.js"></script>
+  <script src="js/plugins.js"></script>
+
+</body>
+</html>
