@@ -2,6 +2,8 @@
 
 Tras la carga incial de un **JSON**, se generan las *cards* de cada elemento. Las *cards* pueden filtrarse al escribir en la caja de búsqueda. El filtro se hace sobre los campos *name* y *description*. La búsqueda es *case insensitive* y *accent insensitive*.
 
+La página tiene *header* y *sticky footer*. Para maquetar he utilizado Bootstrap 4.7.
+
 ## Configuración 
 
 El listado de plugins puede confiogurarse modificando un fichero JSON.
@@ -16,7 +18,7 @@ El listado de plugins puede confiogurarse modificando un fichero JSON.
     "url_en": "https://componentes.cnig.es/api-core/attributions.jsp?language=en",
     "url_git": "https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/attributions",
     "image": "img/api-logo.png",
-    "description": "Plugin que permite mostrar información de atribuciones sobre las capas que se visualizan en el mapa."
+    "description": "Plugin que permite mostrar información de atribuciones sobre las capas que se visualizan."
   },
 ```
 

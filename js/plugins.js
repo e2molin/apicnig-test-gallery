@@ -57,8 +57,8 @@ const outputHTMLBootstrap = matches =>{
 
     const html = matches.map( match => `
               <div class="col" style="padding-bottom:15px;">
-                <div class="card shadow-sm h-100">
-                  <img class="img-fluid" src="${match.image}">
+                <div class="card shadow-sm h-100" style="background-color: rgba(240, 128, 128,0.15);">
+                  <!--<img class="img-fluid" src="${match.image}">-->
                   <h4 class="text-primary text-center pt-2">${match.plugin}</h4>
                   <div class="card-body">
                     <h5 class="card-title">${match.name}</h5>
