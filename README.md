@@ -1,5 +1,9 @@
 # Galería de Plugins APICNIG
 
+Página para mostrar el catálogo de *plugins*.
+
+![](img/porfolio.jpg)
+
 Tras la carga incial de un **JSON**, se generan las *cards* de cada elemento. Las *cards* pueden filtrarse al escribir en la caja de búsqueda. El filtro se hace sobre los campos *name* y *description*. La búsqueda es *case insensitive* y *accent insensitive*.
 
 La página tiene *header* y *sticky footer*. Para maquetar he utilizado Bootstrap 4.7.
